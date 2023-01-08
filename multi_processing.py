@@ -13,7 +13,7 @@ head = {
 url = "https://yorumbudur.com"
 
 
-with open('/Users/ma/Desktop/pythons/tez_inaremie/blm5105/urunlinkleri.txt') as f:
+with open('/home/siriusarabasinema/blm5105/urunlinkleri.txt') as f:
     urunlinkleri = list(f)
 print("urunlinkleri length: ", str(len(urunlinkleri)))
 
@@ -23,7 +23,7 @@ def splitList(a, n):
     return (a[i*k+min(i, m):(i+1)*k+min(i+1, m)] for i in range(n))
 
 
-listOfUrunLinkleri = list(splitList(urunlinkleri, 50))
+listOfUrunLinkleri = list(splitList(urunlinkleri, 500))
 print("listOfUrunLinkleri length: ", str(len(listOfUrunLinkleri)))
 
 
@@ -54,7 +54,7 @@ def urunListesiYorumLinkleriniAl(urunListesi, processNo):
         for bb in basl:
             yorumLinkleri.add(bb)
 
-    with open('/Users/ma/Desktop/pythons/tez_inaremie/blm5105/process_' + str(processNo) + '_yorumlinkleri.txt', 'a') as the_file:
+    with open('/home/siriusarabasinema/blm5105/yorumlinkleri/process_' + str(processNo) + '_yorumlinkleri.txt', 'a') as the_file:
         for tl in yorumLinkleri:
             the_file.write(tl + '\n')
 
